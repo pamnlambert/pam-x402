@@ -1,0 +1,17 @@
+{
+  "name": "pam-x402",
+  "version": "1.0.0",
+  "description": "Pam Intelligence API - x402 payment-enabled agent services",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@x402/vercel": "^1.0.0",
+    "@x402/schemes": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
