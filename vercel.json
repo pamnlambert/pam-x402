@@ -1,21 +1,3 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/api/market-pulse",
-      "dest": "/api/market-pulse.js"
-    },
-    {
-      "src": "/api/agent-report",
-      "dest": "/api/agent-report.js"
-    },
-    {
-      "src": "/api/research",
-      "dest": "/api/research.js"
-    },
-    {
-      "src": "/",
-      "dest": "/api/index.js"
-    }
-  ]
+  "version": 2
 }
