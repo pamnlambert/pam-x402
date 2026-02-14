@@ -12,6 +12,11 @@
     "@coinbase/x402": "^2.1.0",
     "x402-next": "^1.0.0"
   },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/react": "^18",
+    "@types/node": "^18"
+  },
   "engines": {
     "node": ">=18"
   }
