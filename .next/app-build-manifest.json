@@ -1,9 +1,0 @@
-{
-  "pages": {
-    "/api/market-pulse/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/market-pulse/route.js"
-    ]
-  }
-}
