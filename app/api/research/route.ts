@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { withX402 } from "x402-next";
 
-const payTo = (process.env.RECEIVER_WALLET ??
-  "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8") as `0x${string}`;
+export async function POST(req: NextRequest) {
+  const payment = req.headers.get("X-PAYMENT");
+  if (!payment) {
+    return NextResponse.json(
+      {
+        error: "Payment required",
+        accepts: { scheme: "exact", network: "base", maxAmountRequired: "100000", resource: req.url },
+        payTo: "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8",
+        price: "$0.10",
+      },
+      { status: 402 }
+    );
+  }
 
-async function handler(req: NextRequest) {
   const { query } = await req.json();
   return NextResponse.json({
     timestamp: new Date().toISOString(),
@@ -12,5 +21,3 @@ async function handler(req: NextRequest) {
     brief: "Research pipeline active — results coming soon.",
   });
 }
-
-export const POST = withX402(handler, payTo, { price: "$0.10", network: "base" });

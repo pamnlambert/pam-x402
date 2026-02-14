@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
-import { withX402 } from "x402-next";
 
-const payTo = (process.env.RECEIVER_WALLET ??
-  "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8") as `0x${string}`;
+export async function GET(req: NextRequest) {
+  const payment = req.headers.get("X-PAYMENT");
+  if (!payment) {
+    return NextResponse.json(
+      {
+        error: "Payment required",
+        accepts: { scheme: "exact", network: "base", maxAmountRequired: "10000", resource: req.url },
+        payTo: "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8",
+        price: "$0.01",
+      },
+      { status: 402 }
+    );
+  }
 
-async function handler() {
   return NextResponse.json({
     timestamp: new Date().toISOString(),
     trending_tokens: [
@@ -15,5 +24,3 @@ async function handler() {
     sentiment: "Neutral",
   });
 }
-
-export const GET = withX402(handler, payTo, { price: "$0.01", network: "base" });
