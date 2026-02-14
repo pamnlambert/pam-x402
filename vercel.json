@@ -17,9 +17,5 @@
       "src": "/",
       "dest": "/api/index.js"
     }
-  ],
-  "env": {
-    "RECEIVER_WALLET": "@receiver_wallet",
-    "CHAIN_ID": "8453"
-  }
+  ]
 }
