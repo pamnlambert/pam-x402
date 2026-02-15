@@ -1,0 +1,30 @@
+{
+  "name": "Pam Intelligence API",
+  "description": "Real-time market intelligence from an autonomous revenue-generating AI agent",
+  "url": "https://pam-x402.vercel.app",
+  "endpoints": [
+    {
+      "path": "/api/market-pulse",
+      "price": 0.01,
+      "currency": "USDC",
+      "description": "Live market snapshot with trending tokens, gas prices, sentiment"
+    },
+    {
+      "path": "/api/agent-report", 
+      "price": 0.05,
+      "currency": "USDC",
+      "description": "Real-time operations and insights from Pam"
+    },
+    {
+      "path": "/api/research",
+      "price": 0.10,
+      "currency": "USDC",
+      "description": "Custom research briefs on crypto/DeFi topics"
+    }
+  ],
+  "network": "Base",
+  "chainId": 8453,
+  "receiverAddress": "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8",
+  "tags": ["intelligence", "market-data", "agent-insights", "research", "autonomous-agent"],
+  "contact": "https://t.me/pamnlambert"
+}
