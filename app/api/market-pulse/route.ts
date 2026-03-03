@@ -186,6 +186,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         error: "Payment Required",
+        version: "2.0.0-TX-VERIFICATION",
         message: `Send ${REQUIRED_AMOUNT_USD} USDC on Base to ${RECEIVER_WALLET}`,
         instructions: {
           step1: `Send exactly $${REQUIRED_AMOUNT_USD} USDC (or more) on Base network`,
@@ -196,7 +197,8 @@ export async function GET(req: NextRequest) {
           network: "Base",
           chainId: CHAIN_ID,
           token: "USDC",
-          amount: `$${REQUIRED_AMOUNT_USD}`
+          amount: `$${REQUIRED_AMOUNT_USD}`,
+          contract: USDC_CONTRACT
         },
         verificationMethod: "On-chain Base USDC transfer verification",
         status: "AWAITING_PAYMENT"
