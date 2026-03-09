@@ -1,0 +1,22 @@
+{
+  "usedTxHashes": [
+    "0x9652d4344e9ec75a125e085fbc85e9cb7d519ddc9760a4ea760e7e861af44064"
+  ],
+  "transactions": [
+    {
+      "txHash": "0x9652d4344e9ec75a125e085fbc85e9cb7d519ddc9760a4ea760e7e861af44064",
+      "payer": "0x21cA1C50658c6006764DC0BaEA4B528d08D044D8",
+      "amount": "0.01",
+      "endpoint": "/api/market-pulse",
+      "timestamp": "2026-03-07T07:52:00Z",
+      "type": "INTERNAL_TEST",
+      "notes": "First payment - autonomous agent test transaction"
+    }
+  ],
+  "stats": {
+    "totalTransactions": 1,
+    "totalRevenue": "0.01",
+    "firstTransaction": "2026-03-07T07:52:00Z",
+    "lastTransaction": "2026-03-07T07:52:00Z"
+  }
+}
