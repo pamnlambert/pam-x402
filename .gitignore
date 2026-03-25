@@ -5,3 +5,7 @@ node_modules/
 .DS_Store
 .env*.local
 .next
+
+# Prevent stale legacy Vercel serverless functions directory
+# All API routes MUST use Next.js App Router (app/api/) only
+/api/
